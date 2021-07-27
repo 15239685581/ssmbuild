@@ -36,10 +36,13 @@
         </tx:attributes>
     </tx:advice>
 
+	<!--<tx:annotation-driven transaction-manager="txManager"/>-->	
+	
     <!--配置事务切入-->
     <aop:config>
         <aop:pointcut id="tx1" expression="execution(* com.zwb.service.*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="tx1"></aop:advisor>
     </aop:config>
+
 
 </beans>
